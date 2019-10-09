@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/user.service.js"></script>
+    <script src="js/userlist.js"></script>
+</head>
+<body>
+    <table style="width:100%;">
+        <tr>
+            <td>Id</td>
+            <td>Username</td>
+            <td>Firstname</td>
+            <td>Lastname</td>
+            <td>IsReviewer</td>
+            <td>IsAdmin</td>
+        </tr>
+        <tbody id="tbody"></tbody>
+    </table>
+    <button onclick="getUsers();">Get Users</button>
+</body>
+</html>
