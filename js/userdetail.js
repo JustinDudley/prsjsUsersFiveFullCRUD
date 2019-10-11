@@ -1,3 +1,5 @@
+let urlParms = {};
+
 $().ready(() => {
     $("button").click(() => {
         getUser();
@@ -14,5 +16,10 @@ const refresh = (user) => {
 
 const getUser = () => {
     let id = $("#xid").val(); // get the id to display
-    userdetail(id);
+    //userdetail(id);  // the old version
+    UserService.get(id)  // this method is found in the user.service.js file
+        .done( (res) => {       // res = response, fred variable
+            console.log("User:", res);
+            refresh(res);
+        });
 };
